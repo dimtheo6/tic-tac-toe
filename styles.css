@@ -16,9 +16,10 @@
 
 .header{
     display: flex;
-    height: 8em;
+    height: 5em;
     align-items: center;
     justify-content: center;
+    font-size: 1.5em;
     background-color: rgba(7, 56, 52, 0.747);
     color: rgba(160, 207, 207, 0.918);
 }
@@ -66,5 +67,6 @@ button{
     background-color: rgba(10, 68, 63, 0.63);
     color: rgba(160, 207, 207, 0.918);
     cursor: pointer;
+    margin-top: 0.5em;
 }
 

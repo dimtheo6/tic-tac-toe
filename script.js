@@ -47,7 +47,7 @@ function gameController(board) {
     })();
 
 
-    (function playerSelection() {
+    function playerSelection() {
 
         let endgame = false;
         let turn = document.querySelector('.playerTurn');
@@ -77,7 +77,7 @@ function gameController(board) {
                             changePlayer();
                             turn.textContent = `${Player[activePlayer].name} turn `;
                         }
-
+                        
                         console.log(board);
                     }
 
@@ -85,7 +85,8 @@ function gameController(board) {
             })
         }
 
-    })();
+    };
+    
 
     function checkWin(row, col, token) {
 
@@ -113,7 +114,6 @@ function gameController(board) {
     }
 
     function changePlayer() {
-
         activePlayer = activePlayer === 0 ? 1 : 0;
 
     }
@@ -121,7 +121,6 @@ function gameController(board) {
 
     document.querySelector('.reset').addEventListener('click', () => {
         boardReset();
-
     })
 
 
@@ -129,7 +128,7 @@ function gameController(board) {
         const cells = document.querySelectorAll('.cell');
         activePlayer = 0;
 
-        endgame = false;
+        
 
         document.querySelector('.playerTurn').textContent = `${Player[activePlayer].name} turn `;
 
@@ -143,5 +142,8 @@ function gameController(board) {
             cell.innerHTML = '';
         });
 
+        playerSelection();
+
     }
+    playerSelection()
 };
