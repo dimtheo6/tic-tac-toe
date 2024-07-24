@@ -29,6 +29,7 @@
     flex-direction: column;
     gap: 1em;
     padding: 1em;
+    align-items: center;
 
 }
 
@@ -40,8 +41,9 @@
     display: grid;
     grid-template-columns: repeat(3,minmax(100px,200px));
     grid-template-rows: repeat(3,minmax(200px,100px));
-    cursor: pointer;
     justify-content: center;
+ 
+    
     
 }
 
@@ -57,6 +59,7 @@
     align-items: center;
     font-size: 8rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 button{
@@ -68,5 +71,20 @@ button{
     color: rgba(160, 207, 207, 0.918);
     cursor: pointer;
     margin-top: 0.5em;
+}
+
+#reset{
+    display: none;
+    
+}
+
+
+
+
+.gameStart{
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    font-size: 50px;
 }
 

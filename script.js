@@ -12,7 +12,22 @@ function gameboard() {
 
 let game = gameboard();
 
-gameController(game);
+(function gameStart() {
+    const start = document.querySelector('.gameStart');
+    const reset = document.getElementById('reset');
+
+    start.addEventListener('click', () => {
+
+        reset.style.display = 'block';
+        gameController(game);
+
+    })
+
+})();
+
+
+
+
 
 
 function gameController(board) {
@@ -77,7 +92,7 @@ function gameController(board) {
                             changePlayer();
                             turn.textContent = `${Player[activePlayer].name} turn `;
                         }
-                        
+
                         console.log(board);
                     }
 
@@ -86,7 +101,7 @@ function gameController(board) {
         }
 
     };
-    
+
 
     function checkWin(row, col, token) {
 
@@ -128,7 +143,7 @@ function gameController(board) {
         const cells = document.querySelectorAll('.cell');
         activePlayer = 0;
 
-        
+
 
         document.querySelector('.playerTurn').textContent = `${Player[activePlayer].name} turn `;
 
