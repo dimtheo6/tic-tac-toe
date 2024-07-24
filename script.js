@@ -81,7 +81,6 @@ function gameController(board) {
 
                         if (checkWin(parseInt(row), parseInt(col), Player[activePlayer].token)) {
                             turn.textContent = `${Player[activePlayer].name} wins!`;
-                            console.log(`${Player[activePlayer].name} wins!`)
                             endgame = true;
 
                         } else if (isBoardFull()) {
@@ -93,7 +92,6 @@ function gameController(board) {
                             turn.textContent = `${Player[activePlayer].name} turn `;
                         }
 
-                        console.log(board);
                     }
 
                 });
